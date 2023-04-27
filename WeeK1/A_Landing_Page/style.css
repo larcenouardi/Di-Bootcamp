@@ -1,0 +1,70 @@
+body{
+    height: 100vh;
+
+    background-image: url(img/sun.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+        
+        margin-top: 15%;
+        color: #f85f06;
+        
+
+}
+
+#mail { 
+
+   
+    display: inline-block;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row div1{
+    
+    
+}
+
+.btn btn-outline-success my-2 my-sm-0 {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+
+#section_1{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sec_box {
+    display: flex;
+    justify-content: center;
+
+}
+
+/*.boxmodel{
+    background-color: rgb(157, 159, 161);
+border: 1px solid red;  
+display: inline-block;
+padding: 10px 20px;
+margin: 10px 20px;
+width: 200px;
+height: 200px;*/
+
+
+
+}
+
+.fond{
+    position: static 20px;
+    height: 50%;
+    background-color: rgba(43, 214, 214, 0.97);
+    overflow: auto;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Project : Calculator</title>
+  <link rel="stylesheet" href="Style_calculator.css">
+</head>
+<body>
+
+    <!-- <button type="button" name="button" onclick="number(1);">1</button>
+    <button type="button" name="button" onclick="number(2);">2</button>
+    <button type="button" name="button" onclick="number(3);">3</button>
+    <br>
+    <button type="button" name="button" onclick="number(4);">4</button>
+    <button type="button" name="button" onclick="number(5);">5</button>
+    <button type="button" name="button" onclick="number(6);">6</button>
+    <br>
+    <button type="button" name="button" onclick="number(7);">7</button>
+    <button type="button" name="button" onclick="number(8);">8</button>
+    <button type="button" name="button" onclick="number(9);">9</button>
+    <button type="button" name="button" onclick="number(0);">0</button>
+    <br>
+    <button type="button" name="button" onclick="operator('+');">+</button>
+    <button type="button" name="button" onclick="operator('-');">-</button>
+    <button type="button" name="button" onclick="operator('*');">*</button>
+    <button type="button" name="button" onclick="operator('/');">/</button>
+    <button type="button" name="button" onclick="equal();">=</button> -->
+
+
+   <div class="container">
+    <div class="calc">
+        <div >
+            <input class="inp" type="text" id="display" disabled>
+          </div>
+          <div>
+            <button onclick="number('7')">7</button>
+            <button onclick="number('8')">8</button>
+            <button onclick="number('9')">9</button>
+            <button onclick="operatorFunc('/')">÷</button>
+          </div>
+          <div>
+            <button onclick="number('4')">4</button>
+            <button onclick="number('5')">5</button>
+            <button onclick="number('6')">6</button>
+            <button onclick="operatorFunc('*')">x</button>
+          </div>
+          <div>
+            <button onclick="number('1')">1</button>
+            <button onclick="number('2')">2</button>
+            <button onclick="number('3')">3</button>
+            <button onclick="operatorFunc('-')">-</button>
+          </div>
+          <div>
+            <button onclick="number('0')">0</button>
+            <button onclick="number('.')">.</button>
+            <button onclick="equal()">=</button>
+            <button onclick="operatorFunc('+')">+</button>
+          </div>
+          <div>
+            <button class="wd" onclick="reset()" >RESET</button>
+
+            <button class="wd" onclick="Clear()">CLEAR </button>
+          </div>
+       </div>
+   </div>
+
+
+
+
+
+
+    
+    <script src="Script_calculator.js"></script>
+</body>
+</html>

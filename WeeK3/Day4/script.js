@@ -29,6 +29,27 @@ const newDog = "Chihuahua";
 
 console.log("Number of letters in newDog:", newDog.length);
 
+// Display the newDog variable in uppercase and then in lowercase (no need to create new variables, just console.log twice).
+
+
+console.log(newDog.toUpperCase());
+console.log(newDog.toLowerCase());
+
+// Check if the variable newDog is equal to “Chihuahua”
+// if it does, display ‘I love Chihuahuas, it’s my favorite dog breed’
+// else, console.log ‘I dont care, I prefer cats’ */
+
+if (newDog == "Chihuahua")
+   console.log ("I love Chihuahuas, it’s my favorite dog breed");
+else 
+   console.log ("I dont care, I prefer cats");
+
+
+
+
+
+
+
 
 // Exercise 3: Even Or Odd
 

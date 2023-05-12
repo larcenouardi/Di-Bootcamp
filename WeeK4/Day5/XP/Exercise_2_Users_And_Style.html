@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2 : Users And Style</title>
+</head>
+<body>
+    <div>Users:</div>
+    <ul>
+      <li>John & lahcen</li>
+      <li>Pete & Peter </li>
+    </ul>  
+
+
+    <script>
+
+const divElement = document.querySelector('div');
+divElement.style.backgroundColor = 'lightblue';
+divElement.style.padding = '10px';
+
+const johnLiElement = document.querySelector('ul li:first-child');
+johnLiElement.style.display = 'none';
+
+const peteLiElement = document.querySelector('ul li:nth-child(2)');
+peteLiElement.style.border = '1px solid black';
+
+document.body.style.fontSize = '16px';
+
+// Bonus: Checking the background color of the div and displaying an alert
+if (divElement.style.backgroundColor === 'lightblue') {
+  const users = document.querySelectorAll('ul li');
+  const [user1, user2] = users;
+  alert(`Hello ${user1.textContent} and ${user2.textContent}`);
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3 : Change The Navbar</title>
+</head>
+<body>
+
+    <div id="navBar">
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Friends</a></li>
+            <li><a href="#">Messenger</a></li>
+            <li><a href="#">My Pics</a></li>
+        </ul>
+    </div>
+    
+    
+    <script>
+
+// JavaScript code
+const navBarElement = document.getElementById('navBar');
+navBarElement.setAttribute('id', 'socialNetworkNavigation');
+
+const ulElement = navBarElement.firstElementChild;
+
+const newLiElement = document.createElement('li');
+const logoutTextNode = document.createTextNode('Logout');
+newLiElement.appendChild(logoutTextNode);
+
+ulElement.appendChild(newLiElement);
+
+const firstLiElement = ulElement.firstElementChild;
+const lastLiElement = ulElement.lastElementChild;
+
+console.log(firstLiElement.textContent);
+console.log(lastLiElement.textContent);
+
+
+    </script>
+    
+</body>
+</html>

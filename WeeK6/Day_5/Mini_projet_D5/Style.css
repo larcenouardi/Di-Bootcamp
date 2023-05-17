@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #c1d496;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  #quote-section {
+    font-family: cursive;
+    background-color: #adee63;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #222222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+
+  button:hover {
+    background-color: #ee7777;
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"] {
+    padding: 5px;
+    border: 1px solid #f6ea63;
+    border-radius: 3px;
+  }
+
+  #filter-form button,
+  #prev-btn,
+  #next-btn {
+    background-color: #6a6a33;
+  }
+
+  #char-count-btn,
+  #char-count-nospace-btn,
+  #word-count-btn,
+  #like-btn {
+    background-color: #3d64e4;
+  }
+
+  #error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  #success-message {
+    color: green;
+    margin-bottom: 10px;
+  }

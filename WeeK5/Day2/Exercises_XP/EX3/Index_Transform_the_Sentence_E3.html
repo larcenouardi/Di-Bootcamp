@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Bold Text</title>
+    <style>
+        .blue-text {
+            color: rgb(0, 255, 21);
+        }
+    </style>
+</head>
+<body>
+    <p><strong>Hello</strong> I hope you are enjoying <strong>this</strong> class. At the <strong>end</strong> you <strong>will</strong> be great Developers! <strong>Enjoy</strong> the <strong>JavaScript </strong> lessons</p>
+
+    <script>
+        (function() {
+            // Declare a global variable named allBoldItems
+            let allBoldItems;
+
+            // Function to collect all the bold items inside the paragraph
+            function getBoldItems() {
+                allBoldItems = document.querySelectorAll('p strong');
+            }
+
+            // Function to change the color of all the bold text to blue
+            function highlight() {
+                allBoldItems.forEach(item => {
+                    item.classList.add('blue-text');
+                });
+            }
+
+            // Function to change the color of all the bold text back to black
+            function returnNormal() {
+                allBoldItems.forEach(item => {
+                    item.classList.remove('blue-text');
+                });
+            }
+
+            // Call getBoldItems to collect the initial bold items
+            getBoldItems();
+
+            // Add event listeners for mouseover and mouseout
+            document.querySelector('p').addEventListener('mouseover', highlight);
+            document.querySelector('p').addEventListener('mouseout', returnNormal);
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple Event Listeners Example</title>
+    <style>
+        .my-element {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="myBtn">Click me</button>
+
+
+    <script>
+        
+// Get the element
+const myBtn = document.getElementById("myBtn");
+
+// Add event listeners
+myBtn.addEventListener("click", function() {
+  this.style.backgroundColor = "red"; // Change color
+});
+
+myBtn.addEventListener("mouseover", function() {
+  this.style.fontSize = "2rem"; // Change font size
+  this.style.cursor = "pointer"; // Change cursor
+});
+
+myBtn.addEventListener("mouseout", function() {
+  this.style.fontSize = "1rem"; // Reset font size
+});
+
+myBtn.addEventListener("dblclick", function() {
+  let pos = this.getBoundingClientRect(); // Get position of element
+  this.style.position = "absolute"; // Change position
+  this.style.left = pos.x + 20 + "px"; // Move position x
+  this.style.top = pos.y + 20 + "px"; // Move position y
+});
+
+    </script>
+</body>
+</html>

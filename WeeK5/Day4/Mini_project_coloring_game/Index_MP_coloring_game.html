@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coloring Game</title>
+   
+    <style>
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+#color-picker {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.color {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#canvas {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    border: 1px solid black;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+
+#clear-button {
+    display: block;
+    margin: 10px auto;
+}
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Coloring Game</h1>
+    <div id="color-picker">
+        <div class="color" style="background-color: red;"></div>
+        <div class="color" style="background-color: blue;"></div>
+        <div class="color" style="background-color: green;"></div>
+        <div class="color" style="background-color: yellow;"></div>
+    </div>
+    <div id="canvas"></div>
+    <button id="clear-button">CLEAR</button>
+
+
+
+
+    <script>
+
+// Get color picker and canvas elements
+const colorPicker = document.getElementById('color-picker');
+const canvas = document.getElementById('canvas');
+
+// Initialize selected color
+let selectedColor = 'red';
+
+// Create the color squares
+const colors = ['red', 'blue', 'green', 'yellow'];
+colors.forEach(color => {
+    const colorSquare = document.createElement('div');
+    colorSquare.classList.add('color');
+    colorSquare.style.backgroundColor = color;
+    colorSquare.addEventListener('click', () => {
+        selectedColor = color;
+    });
+    colorPicker.appendChild(colorSquare);
+});
+
+// Create the canvas squares
+for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 10; j++) {
+        const square = document.createElement('div');
+        square.classList.add('square');
+        square.addEventListener('mousedown', () => {
+            square.style.backgroundColor = selectedColor;
+        });
+        square.addEventListener('mouseover', (event) => {
+            if (event.buttons === 1) {
+                square.style.backgroundColor = selectedColor;
+            }
+        });
+        canvas.appendChild(square);
+    }
+}
+
+
+
+// Clear the canvas
+clearButton.addEventListener("click", () => {
+    const squares = canvas.querySelectorAll(".square");
+    squares.forEach(square => {
+        square.style.backgroundColor = "white";
+    });
+});
+
+
+
+    </script>
+</body>
+</html>

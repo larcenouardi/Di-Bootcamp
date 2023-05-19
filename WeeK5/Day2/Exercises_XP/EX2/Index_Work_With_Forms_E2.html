@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work With Forms</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form> 
+    <ul class="usersAnswer"></ul>
+
+    <script>
+        // Retrieve the form and console.log it
+        const form = document.querySelector('form');
+        console.log(form);
+
+        // Retrieve the inputs by their id and console.log them
+        const firstNameInput = document.getElementById('fname');
+        const lastNameInput = document.getElementById('lname');
+        console.log(firstNameInput);
+        console.log(lastNameInput);
+
+        // Retrieve the inputs by their name attribute and console.log them
+        const firstNameInputByName = document.querySelector('input[name="fname"]');
+        const lastNameInputByName = document.querySelector('input[name="lname"]');
+        console.log(firstNameInputByName);
+        console.log(lastNameInputByName);
+
+        // When the user submits the form (submit event listener)
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the values of the input tags
+            const firstNameValue = firstNameInput.value;
+            const lastNameValue = lastNameInput.value;
+
+            // Make sure the inputs are not empty
+            if (firstNameValue !== '' && lastNameValue !== '') {
+                // Create li elements per input value
+                const firstNameLi = document.createElement('li');
+                firstNameLi.textContent = firstNameValue;
+                const lastNameLi = document.createElement('li');
+                lastNameLi.textContent = lastNameValue;
+
+                // Append li elements to the <ul class="usersAnswer"></ul>
+                const usersAnswerUl = document.querySelector('.usersAnswer');
+                usersAnswerUl.appendChild(firstNameLi);
+                usersAnswerUl.appendChild(lastNameLi);
+            }
+        });
+    </script>
+</body>
+</html>

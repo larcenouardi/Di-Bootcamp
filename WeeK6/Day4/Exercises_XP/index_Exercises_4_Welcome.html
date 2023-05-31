@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome site!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Welcome!</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+
+(function(userName, profilePicture) {
+  // Add a div in the navbar, displaying the name of the user and his profile picture.
+  const div = document.createElement("div");
+  div.className = "navbar-header";
+  div.innerHTML = `
+    <a class="navbar-brand" href="#">${userName}</a>
+    <img src="${profilePicture}" alt="${userName}'s profile picture">
+  `;
+  document.querySelector(".navbar-header").appendChild(div);
+})("SMILE", "https://www.freeiconspng.com/thumbs/smile-png/best-smile-png-clipart-26.png");
+
+  </script>
+</body>
+</html>

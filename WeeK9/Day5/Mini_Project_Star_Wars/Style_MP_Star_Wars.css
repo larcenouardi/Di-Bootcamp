@@ -1,0 +1,60 @@
+
+.container {
+    background-image: url("https://cutewallpaper.org/21/galaxy-background-gif/Backgrounds-For-Html-Gif-Wallpaper-Cave.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  button {
+    padding: 10px 70px;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: flexbox;
+    margin-bottom: 5px;
+  
+  }
+  
+  button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .loading-message {
+    display: none;
+    margin-bottom: 20px;
+  }
+  
+  .character-info {
+    text-align: center;
+  
+   
+  }
+  
+  
+  #characterInfo{
+  
+      border: thick double #dab81e;
+      height: 200px;
+      width: 250px;
+      border-radius: 5px;
+  }
+  
+  h1{
+  
+  font-size:100px ;
+  color: #dae516;
+  font-family:fantasy;
+  
+  }

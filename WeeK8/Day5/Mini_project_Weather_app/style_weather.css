@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-image: url(img/pexels-engin-akyurt-5674764.jpg);
+  background-size: 1350px;
+ background-repeat: no-repeat;
+}
+
+
+
+#appContainer {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 85%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+#weather-container {
+  width: 200px;
+  height: 260px;
+  background-color: #acf3ea;
+  font-style: oblique;
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px rgb(70, 100, 130) (0, 14, 12, 5);
+  transform: perspective(1000px) rotateX(20deg);
+  position: absolute;
+  float:right;
+  top: 10px;
+  right: -7%;
+  transform: translateX(-50%);0
+  font-size: 14px;
+  text-align: center;
+}
+
+
+
+
+
+
+#weatherCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.weather-card {
+  width: 150px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #c6eb87;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display:inline-block;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #b4eae2;
+
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+p {
+  margin: 0;
+}
+
+.temperature {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#unitToggle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#unitToggle span {
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete-button {
+  position: relative;
+  /* top: 10px; */
+  /* right: 10px; */
+  left: 146px;
+  bottom: 230px;
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #appContainer {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .weather-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

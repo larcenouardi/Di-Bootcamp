@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+    <style>
+
+
+body{
+background-image: url(https://images.unsplash.com/photo-1644329843491-99edfc83de04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+#forma{
+
+display: block;
+text-align: center;
+
+}
+div.task {
+  display:flexbox;
+  align-items: center;
+  justify-content: center;
+  margin-left: 23%;
+}
+
+.task label {
+  margin-left: 10px;
+  text-decoration: none;
+  align-content: center;
+  border:1px bod green ;
+}
+
+.task.completed label {
+  text-decoration: line-through;
+  color: rgb(11, 57, 239);
+}
+
+.listTasks{
+  
+  border-color: blue;
+}
+
+#taskInput{
+
+  width: 50%;
+  height: 25px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+#bttn{
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>TO-DO LIST</h1>
+
+    <div id="forma">
+
+   <form id="taskForm">
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button type="submit" id="bttn">Submit</button>
+  </form>
+
+    </div>
+  <div class="listTasks"></div>
+
+
+
+
+    <script>
+const tasks = [];
+
+function addTask(event) {
+  event.preventDefault();
+  const taskInput = document.getElementById('taskInput');
+  const taskText = taskInput.value.trim();
+  
+  if (taskText !== '') {
+    const task = {
+      task_id: tasks.length,
+      text: taskText,
+      done: false
+    };
+    tasks.push(task);
+    
+    const listTasks = document.querySelector('.listTasks');
+    const taskItem = createTaskElement(task);
+    listTasks.appendChild(taskItem);
+    
+    taskInput.value = '';
+  }
+}
+
+function createTaskElement(task) {
+  const taskItem = document.createElement('div');
+  taskItem.className = 'task';
+  if (task.done) {
+    taskItem.classList.add('completed');
+  }
+  
+  const deleteButton = document.createElement('button');
+  deleteButton.innerHTML = '<i class="fas fa-times"></i>';
+  deleteButton.textContent = "X";
+  deleteButton.addEventListener('click', function() {
+    deleteTask(task.task_id);
+  });
+  
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.checked = task.done;
+  checkbox.addEventListener('change', function() {
+    doneTask(task.task_id);
+  });
+  
+  const label = document.createElement('label');
+  label.textContent = task.text;
+  
+  taskItem.appendChild(deleteButton);
+  taskItem.appendChild(checkbox);
+  taskItem.appendChild(label);
+  
+  return taskItem;
+}
+
+function doneTask(taskId) {
+  const task = tasks.find(task => task.task_id === taskId);
+  if (task) {
+    task.done = !task.done;
+    
+    const taskItem = document.querySelector(`.task:nth-child(${taskId + 1})`);
+    taskItem.classList.toggle('completed');
+  }
+}
+
+function deleteTask(taskId) {
+  tasks.splice(taskId, 1);
+  const taskItem = document.querySelector(`.task:nth-child(${taskId + 1})`);
+  taskItem.remove();
+}
+
+const taskForm = document.getElementById('taskForm');
+taskForm.addEventListener('submit', addTask);
+
+
+    </script>
+</body>
+</html>

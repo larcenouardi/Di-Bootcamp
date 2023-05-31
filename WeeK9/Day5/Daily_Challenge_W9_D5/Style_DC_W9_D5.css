@@ -1,0 +1,65 @@
+body {
+    background-color: #000;
+    background-image:url(https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 80px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .input-section {
+    margin-bottom: 15px;
+    display: block;
+  }
+  
+  label {
+    display: inline-block;
+    width: 60px;
+  }
+  
+  select, input {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 5);
+    color: #000;
+  }
+  
+  button {
+    padding: 8px 15px;
+    background-color: #00ff99;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  #switch-btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #4d4dff;
+    color: #fff;
+  }
+  
+  

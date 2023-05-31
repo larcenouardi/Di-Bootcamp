@@ -46,7 +46,7 @@
   #characterInfo{
   
       border: thick double #dab81e;
-      height: 200px;
+      height: 230px;
       width: 250px;
       border-radius: 5px;
   }
@@ -57,4 +57,15 @@
   color: #dae516;
   font-family:fantasy;
   
+  }
+
+  .loading-message{
+    color: #dae516;
+    height: 50px;
+    margin-top: 50px;
+    size: 50px;
+   
+
+
+
   }

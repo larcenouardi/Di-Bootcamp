@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercises XP</title>
+  
+</head>
+<body>
+  <form method="get" action="" id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    <br><br>
+    <input type="submit" value="Send">
+  </form>
+
+  <script>
+    $(document).ready(function() {
+      $('#myForm').submit(function(event) {
+        event.preventDefault(); // prevent form from submitting normally
+
+        // get the form data
+        var formData = {
+          'name': $('input[name=name]').val(),
+          'message': $('textarea[name=message]').val()
+        };
+
+        // construct the URL
+        var url = 'http://example.com/form.html?' + $.param(formData);
+
+        // redirect the user to the constructed URL
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

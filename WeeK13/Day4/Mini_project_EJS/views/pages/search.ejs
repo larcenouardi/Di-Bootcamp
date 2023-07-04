@@ -1,0 +1,102 @@
+<%- include('../partials/head.ejs') %>
+<style>
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  .form-input,
+  .form-select {
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .btn-search {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0970f8;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn-search:hover {
+    background-color: #053d9e;
+  }
+
+
+
+
+
+</style>
+<%- include('../partials/header.ejs') %>
+
+<div class="container">
+  <h1 class="title">Search</h1>
+
+  <form action="/search" method="POST" class="search-form">
+    <div class="form-group">
+      <label for="title" class="form-label">Search by Title:</label>
+      <input type="text" id="title" name="title" placeholder="Enter title" class="form-input">
+    </div>
+    <button type="submit" class="btn-search">Search</button>
+  </form>
+
+  <form action="/search" method="POST" class="search-form">
+    <div class="form-group">
+      <label for="category" class="form-label">Search by Category:</label>
+      <select id="category" name="category" class="form-select">
+        <option value="">All Categories</option>
+        <option value="COUNTRIES">COUNTRIES</option>
+        <option value="PEOPLE">PEOPLE</option>
+        <option value="50 US STATES">50 US STATES</option>
+        <option value="SPORTS">SPORTS</option>
+        <option value="INVENTIONS">INVENTIONS</option>
+        <option value="FESTIVALS">FESTIVALS</option>
+        <option value="ANIMALS">ANIMALS</option>
+      </select>
+    </div>
+    <button type="submit" class="btn-search">Search</button>
+  </form>
+
+  <!-- Placeholder for search results -->
+  <div class="search-results">
+    <!-- Display search results here -->
+  </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

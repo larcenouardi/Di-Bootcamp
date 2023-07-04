@@ -1,0 +1,12 @@
+<div class="articles">
+    <% for (let i = 0; i < feed.length; i++) { %>
+      <div class="article">
+        <a href="<%= feed[i].link %>"><%= feed[i].title %></a>
+        <p>Date: <%= feed[i].pubDate %></p>
+        <p>Creator: <%= feed[i].creator %></p>
+        <p>Category: <%= feed[i].categories.join(', ') %></p>
+        <p>Content: <%= feed[i].contentSnippet %></p>
+      </div>
+    <% } %>
+  </div>
+  

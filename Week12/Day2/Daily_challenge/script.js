@@ -27,3 +27,16 @@ const server = http.createServer((req, res) => {
 server.listen(3000, () => {
   console.log("I'm listening");
 });
+
+
+
+// part 3 :
+
+// Import the getCurrentDateTime function from main.js
+const getCurrentDateTime = require('./main');
+
+// Use the getCurrentDateTime function to get the current date and time
+const dateTime = getCurrentDateTime();
+
+// Output the current date and time
+console.log(dateTime);

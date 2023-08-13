@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping List</title>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#shoppingList {
+  margin-top: 20px;
+}
+
+#shoppingList p {
+  margin: 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+  <h2>Shopping List</h2>
+  <form id="addItemForm">
+    <label for="item">Item:</label>
+    <input type="text" id="item" required>
+
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="shoppingList">
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

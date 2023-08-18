@@ -31,9 +31,7 @@ app.get('/search', (req, res) => {
 
 app.post('/search', (req, res) => {
   const { title, category } = req.body;
-  // Traitement de la recherche en fonction du titre et de la catégorie
-
-  // Renvoyer les résultats de recherche à la vue correspondante
+ 
   res.render('pages/search', { title, category });
 });
 
